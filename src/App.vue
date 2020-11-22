@@ -1,12 +1,21 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <DashBoard />
   </div>
 </template>
+
+<script>
+import DashBoard from '@/components/DashBoard.vue';
+import dashboardFlexible from '@/utils/setHtmlFontSize.js';
+export default {
+  components: {
+    DashBoard,
+  },
+  created() {
+    dashboardFlexible(16 / 9);
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
