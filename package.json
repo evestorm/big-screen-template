@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@jiaminghi/data-view": "^2.10.0",
+    "@njleonzhang/postcss-px-to-rem": "^1.0.1",
     "core-js": "^3.6.5",
     "echarts": "^4.9.0",
     "vue": "^2.6.11",

@@ -12,18 +12,24 @@ export default {
     DashBoard
   },
   created() {
-    dashboardFlexible(16 / 9);
+    dashboardFlexible(process.env.SCREEN_WIDTH / process.env.SCREEN_HEIGHT);
   }
 };
 </script>
 
 <style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: #000218;
+  height: 100vh;
 }
 
 #nav {
