@@ -9,12 +9,12 @@ import DashBoard from '@/components/DashBoard.vue';
 import dashboardFlexible from '@/utils/setHtmlFontSize.js';
 export default {
   components: {
-    DashBoard,
+    DashBoard
   },
   created() {
     dashboardFlexible(16 / 9);
   }
-}
+};
 </script>
 
 <style lang="scss">
