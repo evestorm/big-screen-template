@@ -1,3 +1,7 @@
+/* eslint-disable global-require */
+/* eslint-disable max-len */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-tabs */
 const webpack = require('webpack');
 const path = require('path');

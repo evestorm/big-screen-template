@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { getBaseCrane } from '@/api/lineCar.js';
 export default {
   name: 'echartsBar',
   data() {
@@ -15,6 +16,9 @@ export default {
   },
   mounted() {
     this.myEcharts();
+    getBaseCrane().then((res) => {
+      console.log(res);
+    });
   },
   methods: {
     myEcharts() {

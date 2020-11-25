@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable guard-for-in */
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -13,6 +15,15 @@ Vue.prototype.$echarts = echarts;
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
+import { directive as clickOutside } from 'v-click-outside-x';
+Vue.directive('clickOutside', clickOutside);
+
+import 'normalize.css/normalize.css';
+
+import * as globalFilter from '@/filters/index';
+for (let key in globalFilter) {
+  Vue.filter(key, globalFilter[key]);
+}
 
 Vue.config.productionTip = false;
 

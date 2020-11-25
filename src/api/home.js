@@ -1,4 +1,4 @@
-import request from '@/util/request';
+import request from '@/utils/request';
 const urlLists = {
     initGetLists: '/websocket/equipmentInform',
     initGetLists2: '/websocket/craneInform',

@@ -1,4 +1,4 @@
-import request from '@/config/httpConfig';
+import request from '@/utils/request';
 const urlLists = {
     getBaseCrane: '/baseCrane/list', // 行车列表
     addBaseCrane: '/baseCrane/addBaseCrane', // 新增行车
