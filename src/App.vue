@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import DashBoard from '@/components/DashBoard.vue';
+import DashBoard from '@/views/DashBoard.vue';
 import dashboardFlexible from '@/utils/setHtmlFontSize.js';
 export default {
   components: {

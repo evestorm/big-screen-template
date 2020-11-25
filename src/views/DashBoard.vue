@@ -1,22 +1,23 @@
 <template>
   <div class='dashboard'>
-    <!-- <Bar ref="bar" /> -->
-    <bar-demo ref="barDemo" />
+    <echarts-bar ref="echartsBar" />
+    <datav-bar ref="datavBar" />
   </div>
 </template>
 
 <script>
-// import Bar from '@/components/Bar/Bar.vue';
-import barDemo from '@/components/barDemo/barDemo.vue';
+import echartsBar from '@/components/echartsBar/echartsBar.vue';
+import datavBar from '@/components/datavBar/datavBar.vue';
 export default {
   name: 'dash-board',
   components: {
-    // Bar,
-    barDemo
+    echartsBar,
+    datavBar
   },
   mounted() {
     window.onresize = () => {
-      this.$refs.barDemo.barDemo.resize();
+      this.$refs.datavBar.myChart.resize();
+      this.$refs.echartsBar.myChart.resize();
     };
   }
 };
@@ -24,6 +25,8 @@ export default {
 
 <style lang="scss" scoped>
 .dashboard {
+  width: 3840px;
+  height: 1080px;
   background: rgb(3, 25, 32);
   position: absolute;
   margin: auto;
@@ -31,10 +34,6 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  // width: 1280px;
-  // height: 720px;
-  width: 3840px;
-  height: 1080px;
   background: url('../assets/images/hangche-bg.png') no-repeat;
   background-size: 100% 100%;
   & > div {
@@ -42,12 +41,7 @@ export default {
     border: solid 1px rgba(255, 255, 255, 0.2);
   }
 }
-#container1 {
-  top: 540px;
-  left: 88px;
-  width: 1020px;
-  height: 480px;
-}
+
 .title {
   top: 50px;
   left: 30px;
