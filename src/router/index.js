@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 
 function loadView(component) {
 	// [request]表示实际解析的文件名
-	return () => import(/* webpackChunkName: "[request]" */ `@/views/${component}`);
+	return () => import(/* webpackChunkName: "[request]" */ `@/pages/${component}`);
 }
 
 Vue.use(VueRouter);

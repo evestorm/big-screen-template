@@ -42,7 +42,7 @@
     "prettier": {
       "semi": true, // 格式化末尾加分号
       "singleQuote": true, // 格式化以单引号为主
-      "trailingComma": "none" // 是否末尾自动添加逗号（数组，json，对象）
+      "trailingComma": "none", // 是否末尾自动添加逗号（数组，json，对象）
       // "es5" - 在ES5中的对象、数组等最后一个元素后面加逗号
       // "none" - 不加逗号
       // "all" - 尽可能都加逗号 (包括函数function的参数).
@@ -72,5 +72,7 @@
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur" // 使用 vetur 格式化 vue
   },
-  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace"
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src"
+  } // Vue路径提示配置
 }

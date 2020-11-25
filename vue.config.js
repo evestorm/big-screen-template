@@ -41,7 +41,7 @@ module.exports = {
 	chainWebpack: (config) => {
 		// config.resolve.alias
 		// 	.set("components", resolve("src/components"))
-		// 	.set("views", resolve("src/views"))
+		// 	.set("pages", resolve("src/pages"))
 		// 	.set("common", resolve("src/common"));
 	},
 	configureWebpack: (config) => {

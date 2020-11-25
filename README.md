@@ -30,7 +30,7 @@ SCREEN_WIDTH = 3840;
 SCREEN_HEIGHT = 1080;
 ```
 
-### views/DashBoard.vue 文件
+### pages/DashBoard.vue 文件
 
 ```css
 .dashboard {

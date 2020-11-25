@@ -10,8 +10,12 @@
   "dependencies": {
     "@jiaminghi/data-view": "^2.10.0",
     "@njleonzhang/postcss-px-to-rem": "^1.0.1",
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "echarts": "^4.9.0",
+    "element-ui": "^2.14.1",
+    "moment": "^2.29.1",
+    "qs": "^6.9.4",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
