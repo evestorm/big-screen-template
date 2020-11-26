@@ -40,7 +40,7 @@ SCREEN_HEIGHT = 1080;
 }
 ```
 
-布局采用绝对定位，设计稿上多少 px，实际代码中就写多少 px。
+布局采用绝对定位，设计稿上多少 px，实际代码中就写多少 px。项目中已写好两个示例，分别为 DataV 的写法和 ECharts 的写法。见 `components` 文件夹下的 `datavBar` 以及 `echartsBar` 。
 
 ## 项目运行脚本
 
