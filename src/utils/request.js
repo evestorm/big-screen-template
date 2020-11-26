@@ -1,11 +1,11 @@
 import axios from 'axios';
+// import store from '@/store';
+import appConfig from '@/config/config';
+// import storage from '@/storage/index';
 import { Message, Loading } from 'element-ui';
-import store from '@/store';
 import qs from 'qs';
 
-import appConfig from '@/config/config';
-
-const http = {};
+const request = {};
 let loadingObj = {};
 const instance = axios.create({
   timeout: 20000,
@@ -27,7 +27,7 @@ const instance = axios.create({
             Message.warning({
                 message: '授权失败，请重新登录'
             });
-            store.commit('LOGIN_OUT');
+            // store.commit('LOGIN_OUT');
             setTimeout(() => {
                 window.location.reload();
             }, 1000);
@@ -51,6 +51,7 @@ const instance = axios.create({
             Message.warning({
               message: '出错啦~ 请刷新后重试'
             });
+            break;
     }
     // eslint-disable-next-line consistent-return
     return status >= 200 && status < 300;
@@ -62,12 +63,12 @@ instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlenco
 // 添加请求拦截器
 instance.interceptors.request.use(
    config => {
-        // 请求头添加token
-        loadingObj = Loading.service({
-            lock: true,
-            text: '加载中',
-            background: '#fff'
+       loadingObj = Loading.service({
+           lock: true,
+           text: '加载中',
+           background: '#fff'
         });
+        // 请求头添加token
         // if (store.state.UserToken) {
         //     config.headers.Authorization = `Bearer ${store.state.UserToken}`
         // }
@@ -111,6 +112,7 @@ instance.interceptors.response.use(
         return response.data;
     },
     err => {
+        loadingObj.close();
         if (err && err.msg) {
             this.$message.error(err.msg);
         }
@@ -118,11 +120,11 @@ instance.interceptors.response.use(
     }
 );
 
-http.get = (url, params) => {
+request.get = (url, params) => {
     return instance.get(url, { params: params });
 };
 
-http.post = (url, params) => {
+request.post = (url, params) => {
     return instance.post(url, qs.stringify(params));
 };
 
