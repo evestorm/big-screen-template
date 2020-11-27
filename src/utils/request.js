@@ -48,9 +48,9 @@ const instance = axios.create({
             });
             break;
         default:
-            Message.warning({
-              message: '出错啦~ 请刷新后重试'
-            });
+            // Message.warning({
+            //   message: '出错啦~ 请刷新后重试'
+            // });
             break;
     }
     // eslint-disable-next-line consistent-return
